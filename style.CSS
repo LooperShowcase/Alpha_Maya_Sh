@@ -1,0 +1,112 @@
+/* General Styles */
+p {
+  color: rgb(170, 76, 53);
+  font-size: large;
+}
+
+P {
+  font-size: 20px;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+}
+
+body {
+  background-color: rgb(226, 220, 180);
+  font-family: "Lora", serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Containers */
+#annediv, #gilmoregirlsdiv, #sss {
+  background-color: rgba(0, 0, 0, 0.053);
+  border-radius: 30px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+/* Navigation Menu */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #c5b28f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  float: none;
+  display: inline;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #0000001c;
+}
+
+.active {
+  background-color: hsl(30, 48%, 75%);
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Iframes (YouTube Trailers) */
+iframe {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  aspect-ratio: 16/9;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  p {
+      font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p {
+      font-size: 16px;
+  }
+
+  ul {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  p {
+      font-size: 14px;
+  }
+
+  h2 {
+      font-size: 18px;
+  }
+
+  iframe {
+      max-width: 100%;
+  }
+}

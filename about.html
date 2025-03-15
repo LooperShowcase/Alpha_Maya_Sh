@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="https://www.citypng.com/public/uploads/preview/round-netflix-logo-701751694792607bemlfazrrl.png">
+      <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    .slideshow-container {
+        position: relative;
+        max-width: 600px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .slide {
+        display: none;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+</style>
+
+  <body>
+
+    <ul>
+        <li><a  href="index.html">Home</a></li>
+        <li><a href="netflix.html">Netflix</a></li>  
+        <li><a href="about.html">About</a></li>  
+      </ul>
+
+      <h1>About This Website</h1>
+      <hr>
+      <p>Hi, my name is Maya and this is my first website. Currently, I am a 14-year-old ninth grader. I'm just writing this to read it later when it's a memory. I'm planning to learn computer science in university, and my dream is to study at Stanford University or Yale, but mostly at Stanford.</p>
+      
+      <h2>My Interests</h2>
+      <p>I like traveling, cats, building LEGO sets and collecting them, books—especially the <b>Shatter Me and Caraval</b> series, London, eating, movies, TV series, and Harry Potter movies, especially <b>The Chamber of Secrets</b>.</p>
+      
+      <h2>Why I Created This Website</h2>
+      <p>I'm passionate about movies and TV series, and I wanted a space to express my opinions, share recommendations, and engage with others who enjoy watching amazing stories unfold on screen.</p>
+      
+      <h2>Fun Facts</h2>
+      <ul>
+          <li>My favorite show of all time is <b>Gilmore Girls</b> (Season 2 is the best!).</li>
+          <li>I'm still hoping for a <b>Season 4</b> of Anne with an E!</li>
+          <li>I love rewatching my favorite episodes multiple times.</li>
+          <li>Yes, I actually timed it—it takes around 115 hours to finish Gilmore Girls!</li>
+          <il>In the last few years I have built 11414 lego pieces</il>
+      </ul>
+      
+   
+      <h2 style="text-align:center">MY GALLERY</h2>
+    <div class="slideshow-container">
+        <div class="slide"><img src="/4.jpeg" alt="Traveling"></div>
+        <div class="slide"><img src="/2.jpg" alt="Cats"></div>
+        <div class="slide"><img src="/6.jpeg" alt="LEGO Sets"></div>
+        <div class="slide"><img src="/1.jpg" alt="Books - Caraval Series"></div>
+        <div class="slide"><img src="/5.jpeg" alt="London"></div>
+        <div class="slide"><img src="/7.jpeg" alt="food"></div>
+        <div class="slide"><img src="/3.jpg" alt="Movies & TV Series"></div>
+        <div class="slide"><img src="/8.jpeg" alt="Harry Potter - Chamber of Secrets"></div>
+        
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function plusSlides(n) {
+            slideIndex += n - 1;
+            showSlides();
+        }
+    </script>
+      </body>
+      </html>
